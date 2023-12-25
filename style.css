@@ -1,0 +1,121 @@
+*{
+    margin: 0;  
+}
+body{
+    display: flex;
+    background-color: black;
+    background-image: url(galaxy.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    position: relative;
+    font-size: 3rem;
+    left: 43%;
+    top: 30vh;
+    text-shadow: 3px 3px purple;
+    color: black;
+}
+
+nav{
+    display: flex;
+    background: #1d1d1da1;;
+    justify-content: space-around;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    font-size: 1.7rem;
+    font-style: unset;
+    color:#ffffff;
+}
+@media screen and (max-width: 600px){
+    nav{
+        position: relative;
+        background-color: #141427;
+    }
+    .pagetitle{
+        background-color: #141427;
+        padding: 1vw;
+    }
+    .links{
+        display: none;
+        z-index: 1;
+        position:absolute;
+        background-color: #141427;
+        min-width: 100vw;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+    .links a{
+        color: #ffffff;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        display: block;
+    }
+}
+
+.body{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 90;
+}
+
+#planet{
+    background-image: url(waterplanet.gif);
+    width: 200px;
+    height: 200px;
+    animation: planetmotion 180s infinite;
+}
+
+@keyframes planetmotion{
+    0%{
+        transform: translate(-200px, -200px);
+    }
+    100%{
+        transform: translate(1900px, 200px);
+    }
+}
+
+#star{
+    background-image: url(sunstar.gif);
+    width: 150px;
+    height: 150px;
+    animation: starmotion 180s infinite;
+    top: 100px;
+    left: 120%;
+}
+
+@keyframes starmotion{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(2); 
+    }
+    100%{
+        transform: scale(1); 
+    }
+}
+
+#void{
+    background-image: url(endervoid.gif);
+    width: 300px;
+    height: 300px;
+    animation: voidmotion 90s linear infinite;
+    top: 245px;
+    right: 30%;
+}
+
+@keyframes voidmotion{
+    0%{
+        transform: skew(20deg) rotate(0deg);
+    }
+    50%{
+        transform: skew(-20deg) rotate(180deg);
+    }
+    100%{
+        transform: skew(-20deg) rotate(360deg);
+    }
+}
